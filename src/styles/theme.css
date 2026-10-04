@@ -1,0 +1,110 @@
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS — change the look of the whole site from here.
+   Colors, fonts, spacing, corners and shadows. Nothing else needed.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand colors ─────────────────────────────────────────── */
+  --brand: #4338ca; /* main (buttons, links, titles) */
+  --brand-soft: #eef2ff; /* soft brand background */
+  --brand-strong: #312e81; /* darker brand */
+  --accent: #f97316; /* highlights, hero accents */
+  --accent-soft: #fff1e6;
+  --on-brand: #ffffff; /* text color on top of --brand */
+
+  /* ── Stage colors (Session 1) ─────────────────────────────── */
+  --start: #16a34a;
+  --start-soft: #ecfdf5;
+  --development: #d97706;
+  --development-soft: #fffbeb;
+  --closing: #2563eb;
+  --closing-soft: #eff6ff;
+
+  /* ── Surfaces & text ──────────────────────────────────────── */
+  --bg: #fbfaff;
+  --bg-alt: #f3f2fb;
+  --surface: #ffffff;
+  --border: #e5e3f0;
+  --text: #1c1b2a;
+  --text-soft: #56546b;
+  --text-faint: #86849c;
+
+  /* ── Typography ───────────────────────────────────────────── */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-hero: clamp(2.6rem, 7vw, 5rem);
+  --fs-h2: clamp(1.9rem, 4vw, 2.9rem);
+  --fs-h3: clamp(1.15rem, 2vw, 1.4rem);
+  --fs-body: clamp(1rem, 1.2vw, 1.08rem);
+
+  /* ── Shape & depth ────────────────────────────────────────── */
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --shadow-sm: 0 1px 2px rgba(28, 27, 42, 0.06);
+  --shadow: 0 10px 30px -12px rgba(28, 27, 42, 0.18);
+  --shadow-lg: 0 28px 60px -28px rgba(49, 46, 129, 0.35);
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  --maxw: 1140px;
+  --gutter: clamp(1.1rem, 4vw, 2.5rem);
+  --section-y: clamp(4rem, 9vw, 7.5rem);
+
+  /* ── Motion ───────────────────────────────────────────────── */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --speed: 0.35s;
+}
+
+/* ── Dark mode (automatic, follows the device) ──────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --brand: #a5b4fc;
+    --brand-soft: #1e1b3a;
+    --brand-strong: #c7d2fe;
+    --accent: #fb923c;
+    --accent-soft: #3a2415;
+    --on-brand: #0e0d17;
+
+    --start-soft: #0f2a1d;
+    --development-soft: #2d2109;
+    --closing-soft: #10203c;
+
+    --bg: #0e0d17;
+    --bg-alt: #141322;
+    --surface: #1a1930;
+    --border: #2b2947;
+    --text: #f2f1fa;
+    --text-soft: #c0bed4;
+    --text-faint: #8f8dab;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 28px 60px -28px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Manual dark mode (toggle button sets data-theme="dark") */
+:root[data-theme='dark'] {
+  --brand: #a5b4fc;
+  --brand-soft: #1e1b3a;
+  --brand-strong: #c7d2fe;
+  --accent: #fb923c;
+  --accent-soft: #3a2415;
+  --on-brand: #0e0d17;
+
+  --start-soft: #0f2a1d;
+  --development-soft: #2d2109;
+  --closing-soft: #10203c;
+
+  --bg: #0e0d17;
+  --bg-alt: #141322;
+  --surface: #1a1930;
+  --border: #2b2947;
+  --text: #f2f1fa;
+  --text-soft: #c0bed4;
+  --text-faint: #8f8dab;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 28px 60px -28px rgba(0, 0, 0, 0.8);
+}
