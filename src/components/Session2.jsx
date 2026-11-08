@@ -76,6 +76,29 @@ export default function Session2() {
 
         <SelfAssessment />
       </div>
+
+      <Reveal style={{ maxWidth: '52rem', marginTop: 'clamp(3rem, 7vw, 5rem)', marginBottom: '2rem' }}>
+        <Editable as="p" className="eyebrow" path="session2.game.eyebrow" />
+        <Editable as="h3" className="section__title" path="session2.game.title" />
+        <Editable as="p" className="lead" path="session2.game.intro" />
+      </Reveal>
+
+      <Reveal className="embed" delay={80}>
+        <iframe
+          src={s.game.embedUrl}
+          title={s.game.embedTitle}
+          loading="lazy"
+          allowFullScreen
+          allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+        />
+      </Reveal>
+
+      <Reveal className="embed__actions" delay={120}>
+        <a className="btn btn--ghost" href={s.game.embedUrl} target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">↗</span>
+          <Editable as="span" path="session2.game.openLabel" />
+        </a>
+      </Reveal>
     </Section>
   )
 }

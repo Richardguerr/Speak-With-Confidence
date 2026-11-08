@@ -327,6 +327,16 @@ export const site = {
       reflectionPrompt: 'What did I learn about myself as an English speaker?',
       reflectionPlaceholder: 'Write your reflection here…',
     },
+    game: {
+      eyebrow: 'Practice Game',
+      title: 'Visiting the doctor',
+      intro:
+        'Put Session 2 into practice with this interactive activity: build a dialogue for a visit to the doctor, step by step.',
+      // Paste any Educaplay / Wordwall / Kahoot embed URL here.
+      embedUrl: 'https://es.educaplay.com/juego/30884277-speak_with_confidence_quick_real_life_chats.html',
+      embedTitle: 'Visiting the doctor: create a dialogue',
+      openLabel: 'Play in a new tab',
+    },
   },
 
   presentation: {
