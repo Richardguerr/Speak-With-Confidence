@@ -83,22 +83,30 @@ export default function Session2() {
         <Editable as="p" className="lead" path="session2.game.intro" />
       </Reveal>
 
-      <Reveal className="embed" delay={80}>
-        <iframe
-          src={s.game.embedUrl}
-          title={s.game.embedTitle}
-          loading="lazy"
-          allowFullScreen
-          allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
-        />
-      </Reveal>
+      {s.game.items.map((game, i) => (
+        <div key={game.embedUrl} className="game-item">
+          <Reveal>
+            <Editable as="h4" className="game-item__title" path={`session2.game.items.${i}.title`} />
+          </Reveal>
 
-      <Reveal className="embed__actions" delay={120}>
-        <a className="btn btn--ghost" href={s.game.embedUrl} target="_blank" rel="noopener noreferrer">
-          <span aria-hidden="true">↗</span>
-          <Editable as="span" path="session2.game.openLabel" />
-        </a>
-      </Reveal>
+          <Reveal className="embed embed--game" delay={80}>
+            <iframe
+              src={game.embedUrl}
+              title={game.title}
+              loading="lazy"
+              allowFullScreen
+              allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+            />
+          </Reveal>
+
+          <Reveal className="embed__actions" delay={120}>
+            <a className="btn btn--ghost" href={game.embedUrl} target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">↗</span>
+              <Editable as="span" path="session2.game.openLabel" />
+            </a>
+          </Reveal>
+        </div>
+      ))}
     </Section>
   )
 }

@@ -328,14 +328,33 @@ export const site = {
       reflectionPlaceholder: 'Write your reflection here…',
     },
     game: {
-      eyebrow: 'Practice Game',
-      title: 'Visiting the doctor',
+      eyebrow: 'Practice Games',
+      title: 'Put Session 2 into practice',
       intro:
-        'Put Session 2 into practice with this interactive activity: build a dialogue for a visit to the doctor, step by step.',
-      // Paste any Educaplay / Wordwall / Kahoot embed URL here.
-      embedUrl: 'https://es.educaplay.com/juego/30884277-speak_with_confidence_quick_real_life_chats.html',
-      embedTitle: 'Visiting the doctor: create a dialogue',
+        'Practise what you learned with these interactive activities: real-life chats, a quick quiz, and listening games for English sounds.',
       openLabel: 'Play in a new tab',
+      // Paste any Educaplay / Wordwall / Kahoot embed URL here.
+      items: [
+        {
+          title: 'Quick real-life chats',
+          embedUrl:
+            'https://es.educaplay.com/juego/30884277-speak_with_confidence_quick_real_life_chats.html',
+        },
+        {
+          title: 'Try your knowledge!',
+          embedUrl: 'https://es.educaplay.com/juego/31427744-try_your_n.html',
+        },
+        {
+          title: 'Listen and match: English sounds and pictures',
+          embedUrl:
+            'https://es.educaplay.com/juego/31162613-listen_and_match_english_sounds_and_pictures.html',
+        },
+        {
+          title: 'Short "i" phonics splat: listen and jump!',
+          embedUrl:
+            'https://es.educaplay.com/juego/28788048-short_i_phonics_splat_listen_and_jump.html',
+        },
+      ],
     },
   },
 

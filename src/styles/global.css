@@ -1139,6 +1139,16 @@ ul {
   margin-top: 1.4rem;
 }
 
+.game-item + .game-item {
+  margin-top: clamp(3rem, 7vw, 4.5rem);
+}
+
+.game-item__title {
+  max-width: 840px;
+  margin: 0 auto 1rem;
+  font-size: 1.25rem;
+}
+
 @media print {
   .embed {
     display: none;
