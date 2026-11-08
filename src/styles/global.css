@@ -1146,7 +1146,7 @@ ul {
 .game-item__title {
   max-width: 840px;
   margin: 0 auto 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 @media print {

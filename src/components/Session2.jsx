@@ -89,7 +89,7 @@ export default function Session2() {
             <Editable as="h4" className="game-item__title" path={`session2.game.items.${i}.title`} />
           </Reveal>
 
-          <Reveal className="embed embed--game" delay={80}>
+          <Reveal className="embed" delay={80}>
             <iframe
               src={game.embedUrl}
               title={game.title}
